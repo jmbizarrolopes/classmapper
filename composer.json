@@ -1,12 +1,16 @@
 {
   "name" : "seshatsolutions/classmapper",
-  "description" : "Provides a json classmapper for a PHP app",
+  "type": "library",
+  "description" : "Seshat Json Classmapper Component",
   "version" : "0.0.1",
   "license": "MIT",
   "require" : {
     "php" : ">=5.3.1"
   },
-  "minimum-stability" : "stable",
+  "autoload": {
+  	"psr-4": { "Seshat\\Mapper\\": "" }
+  },
+  "minimum-stability" : "dev",
   "authors" : [ {
     "name" : "João Marcos Bizarro Lopes",
     "email" : "jmbizarrolopes@gmail.com"

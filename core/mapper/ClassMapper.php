@@ -1,5 +1,5 @@
 <?php
-namespace Seshat\Mapper;
+namespace Seshat\Component\Mapper;
 
 define("DOCUMENT_ROOT", $_SERVER["DOCUMENT_ROOT"]);
 
