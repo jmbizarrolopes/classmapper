@@ -2,6 +2,7 @@
   "name" : "seshatsolutions/classmapper",
   "description" : "Provides a json classmapper for a PHP app",
   "version" : "0.0.1",
+  "license": "MIT",
   "require" : {
     "php" : ">=5.3.1"
   },
