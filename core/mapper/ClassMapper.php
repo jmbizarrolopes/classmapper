@@ -10,7 +10,7 @@ class ClassMapper
 
     public function __construct($directory = '')
     {
-        if (is_string($directory) && ! empty($directory))
+        if (is_string($directory))
             $this->directory = $directory;
         spl_autoload_register("\\$this::autoload");
     }
