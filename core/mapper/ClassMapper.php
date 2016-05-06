@@ -12,7 +12,7 @@ class ClassMapper
     {
         if (is_string($directory))
             self::$directory = $directory;
-        spl_autoload_register("\\self::autoload");
+        spl_autoload_register("\\$this::autoload");
     }
 
     public static function autoload($className)
