@@ -11,5 +11,5 @@ namespace Seshat\ClassMapper;
 
 class ClassMapper
 {
-
+    private $directory;
 }
