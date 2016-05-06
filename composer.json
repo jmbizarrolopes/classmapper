@@ -1,0 +1,14 @@
+{
+  "name": "seshatsolutions/classmapper",
+  "description": "Provides a json classmapper for a PHP app",
+  "minimum-stability": "alpha",
+  "authors": [
+    {
+      "name": "João Marcos Bizarro Lopes",
+      "email": "jmbizarrolopes@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.1"
+  }
+}
