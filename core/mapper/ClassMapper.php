@@ -1,17 +1,17 @@
 <?php
-namespace Seshat\ClassMapper;
+namespace Seshat\Mapper;
 
 define("DOCUMENT_ROOT", $_SERVER["DOCUMENT_ROOT"]);
 
 class ClassMapper
 {
 
-    private $directory;
+    private static $directory;
 
     public function __construct($directory = '')
     {
         if (is_string($directory))
-            $this->directory = $directory;
+            self::$directory = $directory;
         spl_autoload_register("\\self::autoload");
     }
 
@@ -24,7 +24,7 @@ class ClassMapper
 
     private function requireClasses($className)
     {
-        $map = $this->getSetupFile();
+        $map = self::getSetupFile();
         foreach ($map as $class => $file) {
             if ($class == $className) {
                 try {
@@ -38,7 +38,7 @@ class ClassMapper
 
     private function getSetupFile()
     {
-        return json_decode(file_get_contents(str_replace("\\", "/", DOCUMENT_ROOT . $this->directory . "/classmap.json")));
+        return json_decode(file_get_contents(str_replace("\\", "/", DOCUMENT_ROOT . self::$directory . "/classmap.json")));
     }
 
     public function __toString()
