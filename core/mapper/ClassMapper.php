@@ -19,7 +19,7 @@ class ClassMapper
     {
         if (! is_string($className))
             throw new \Exception();
-        $this->requireClasses($className);
+        self::requireClasses($className);
     }
 
     private function requireClasses($className)
